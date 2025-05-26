@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>homepage</title>
+
+</head>
+
+<body>
+<h1>Data base</h1>
+<a href="{%url 'register' %}"><button style="margin-left:3%;transform:scale(1.4,1.4);">Add student</button></a><br><br>
+<table border="1" cellpadding="5" style="border-collapse:collapse;">
+ <thead>
+ <tr>
+   <th colspan="2">details</th>
+    <th rowspan="2" colspan="2">options</th>
+ </tr>
+ <tr>
+     <th>Name</th>
+     <th>Roll-no</th>
+ </tr>
+ </thead>
+    <tbody>
+ {% for students in stored %}
+ <tr>
+     <td class>{{students.name}}</td><td>{{students.Roll_no}}</td>
+     <td><a href="{%url 'update' students.pk %}"><button>edit</button></a></td>
+     <td><a href="{%url 'delete' students.pk %}"><button >delete</button></a></td>
+ </tr>
+ {% endfor %}
+  </tbody>
+</table>
+</body>
+</html>

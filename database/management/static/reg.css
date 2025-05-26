@@ -1,0 +1,15 @@
+div{
+margin:10px;
+}
+label{
+color:blue;
+margin-inline:5px;
+font-size:1.4rem;
+}
+input{
+font-size:1.2rem;
+}
+button[type=submit]{
+transform:scale(1.4,1.4);
+margin-left:5%;
+}
